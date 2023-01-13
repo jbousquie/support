@@ -77,7 +77,6 @@
                 tg = evt.target;
                 var addr = tg.getAttribute("name");
                 navigator.clipboard.writeText(addr);
-
                 for (var i = 0; i < taps.length; i++) {
                     var tap = taps[i];
                     tap.style.color = container.style.color;
@@ -85,12 +84,10 @@
                     var msgEl = tap.querySelector('#msg');
                     msgEl.innerHTML = '';
                 }
-
                 tg.style.backgroundColor = 'DarkBlue';
                 tg.style.color = 'White';
                 var tg_msg = tg.querySelector('#msg');
                 tg_msg.innerHTML = '&nbsp;&nbsp;&nbsp; > &nbsp;&nbsp;<i>Adresse copiée dans le presse-papier</i>';
-
             };
 
             cr.addEventListener('click', copyText);
